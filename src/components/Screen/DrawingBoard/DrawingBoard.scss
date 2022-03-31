@@ -1,0 +1,12 @@
+@import "src/styles/colors";
+
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__color-picker {
+    margin: 30px 0;
+  }
+}

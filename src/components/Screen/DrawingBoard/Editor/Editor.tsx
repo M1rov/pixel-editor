@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ColorPicker = () => {
+const Editor = () => {
   return (
     <div>
-      
+
     </div>
   );
 };
 
-export default ColorPicker;
+export default Editor;

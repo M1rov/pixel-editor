@@ -1,0 +1,43 @@
+@import "src/styles/colors";
+
+$inputSize: 80px;
+
+.options {
+  margin-top: 40px;
+
+  &__subtitle {
+    font-weight: 400;
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    line-height: 32px;
+    &:not(:last-child) {
+      margin-right: calc(#{$inputSize} / 2);
+    }
+  }
+
+  &__input {
+    color: inherit;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 2em;
+    width: $inputSize;
+    height: $inputSize;
+    background: $bgColor;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba($mainColor2, 0.8);
+    &:focus {
+      box-shadow: 0 0 5px rgba($mainColor1, 0.7);
+    }
+  }
+
+}

@@ -1,0 +1,15 @@
+$colorSize: 32px;
+
+.color-picker {
+  &__item {
+    border: none;
+    border-radius: 50%;
+    height: $colorSize;
+    width: $colorSize;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
