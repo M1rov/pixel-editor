@@ -1,0 +1,15 @@
+$cellSize: 16px;
+
+.editor {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  cursor: pointer;
+  user-select: none;
+  &__cell {
+    width: $cellSize;
+    height: $cellSize;
+    background: #fff;
+  }
+}

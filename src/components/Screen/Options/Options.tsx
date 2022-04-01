@@ -15,7 +15,7 @@ const Options: FC<OptionsProps> = ({width, height, setHeight, setWidth, setScree
   const setDimension = (setState: Function, value: string) => {
     if (!value) {
       setState(0)
-    } else if (/^[\d]+$/.test(value) && value.length < 4) {
+    } else if (/^[\d]+$/.test(value) && value.length < 3) {
       setState(+value)
     }
   }

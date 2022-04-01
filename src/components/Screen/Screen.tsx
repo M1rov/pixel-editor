@@ -25,7 +25,7 @@ const Screen = () => {
       }
 
       {screenState === ScreenStates.DRAWING_BOARD ?
-        <DrawingBoard width={width} height={height}/>
+        <DrawingBoard width={width} height={height} setScreenState={setScreenState}/>
         :
         null
       }

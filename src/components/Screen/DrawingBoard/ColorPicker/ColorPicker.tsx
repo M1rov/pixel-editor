@@ -5,13 +5,21 @@ import './ColorPicker.scss'
 
 interface ColorPickerProps {
   colors: ColorI[],
-  className?: string
+  className?: string,
+  selectedColor: string,
+  onColorChange: (color: string) => void;
 }
 
-const ColorPicker: FC<ColorPickerProps> = ({colors, className}) => {
+const ColorPicker: FC<ColorPickerProps> = ({colors, className, selectedColor, onColorChange}) => {
   return (
     <div className={['color-picker', className].join(' ')}>
-      {colors.map(color => <Color key={color.id} hex={color.hex}/>)}
+      {colors.map(color =>
+        <Color
+          key={color.id}
+          hex={color.hex}
+          active={color.hex === selectedColor}
+          onColorChange={onColorChange}
+        />)}
     </div>
   );
 };

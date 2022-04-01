@@ -2,14 +2,17 @@ import React from 'react';
 import './Color.scss'
 
 type Props = {
-  hex: string
+  hex: string,
+  onColorChange: (color: string) => void,
+  active: boolean
 }
 
 
-const Color = ({hex}: Props) => {
+const Color = ({hex, active, onColorChange}: Props) => {
   return (
     <button
-      style={{background: hex}}
+      style={active ? {background: '#3e4043', border: `3px solid ${hex}`} : {background: hex}}
+      onClick={() => onColorChange(hex)}
       className='color-picker__item'
     />
   );
