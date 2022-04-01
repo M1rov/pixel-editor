@@ -1,7 +1,9 @@
 $cellSize: 16px;
+$bigBoardSize: 400px;
+$smallBoardSize: 300px;
 
 .editor {
-  width: 400px;
+  width: $bigBoardSize;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
@@ -11,5 +13,11 @@ $cellSize: 16px;
     width: $cellSize;
     height: $cellSize;
     background: #fff;
+  }
+}
+
+@media (max-width: 530px) {
+  .editor {
+    width: $smallBoardSize;
   }
 }

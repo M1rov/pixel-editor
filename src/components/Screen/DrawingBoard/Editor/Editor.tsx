@@ -8,7 +8,9 @@ interface EditorProps {
   editorRef?: RefObject<HTMLDivElement>
 }
 
-const BOARD_SIZE = 400;
+const BIG_BOARD_SIZE = 400;
+const SMALL_BOARD_SIZE = 300;
+const BOARD_SIZE = window.innerWidth > 530 ? BIG_BOARD_SIZE : SMALL_BOARD_SIZE;
 
 const Editor: FC<EditorProps> = ({width, height, color, editorRef}) => {
   const [cells, setCells] = useState<ReactElement[]>([]);
@@ -20,6 +22,7 @@ const Editor: FC<EditorProps> = ({width, height, color, editorRef}) => {
     isMousePressedRef.current = data;
     _setIsMousePressed(data);
   }
+
 
   useEffect(() => {
     for (let i = 0; i < width * height; i++) {
@@ -47,6 +50,7 @@ const Editor: FC<EditorProps> = ({width, height, color, editorRef}) => {
          onMouseOver={setBackgroundColor}
          onClick={e => setBackgroundColor(e, true)}
          onMouseUp={() => setIsMousePressed(false)}
+         onMouseLeave={() => setIsMousePressed(false)}
     >
       {cells}
     </div>
