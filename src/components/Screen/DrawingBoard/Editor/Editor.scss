@@ -1,0 +1,23 @@
+$cellSize: 16px;
+$bigBoardSize: 400px;
+$smallBoardSize: 300px;
+
+.editor {
+  width: $bigBoardSize;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  cursor: pointer;
+  user-select: none;
+  &__cell {
+    width: $cellSize;
+    height: $cellSize;
+    background: #fff;
+  }
+}
+
+@media (max-width: 530px) {
+  .editor {
+    width: $smallBoardSize;
+  }
+}

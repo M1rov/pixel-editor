@@ -1,9 +1,11 @@
 import React from 'react';
-import '../styles/App.scss';
+import './App.scss';
+import Screen from "./Screen/Screen";
 
 function App() {
   return (
     <div className="App">
+      <Screen/>
     </div>
   );
 }
